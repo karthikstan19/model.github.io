@@ -1,0 +1,77 @@
+body{
+    margin:0 auto;
+    padding:0;
+    font-family:"Times New Roman", Times, serif;
+    background-color:#FFFAF1;
+    position: relative;
+    
+}
+.navbar{
+    width:100%;
+    position: fixed;
+    z-index: 1;
+
+
+    
+   
+}
+.nav-item a{
+    color:white;
+}
+.jumbotron{
+
+    background-color: #010101;
+    margin-top: 2px;
+}
+
+#logo{
+    width:400px;
+    height:200px;
+    position:relative;
+   
+    }
+.card-img-top{
+    height:280px;
+}
+
+
+.d-block{
+    width:400px;
+    height: 300px;
+}
+.carousel-item{
+    width:600px;
+    height:530px;
+    position:relative;
+   
+}
+.lead{
+    color:white;
+}
+.jumbotron p{
+    color:white;
+}
+#endbar{
+ background-color: #4C8DD3;
+ text-align:center;  
+}
+#endbar h4{
+    color:white;
+}
+#endbar h1{
+    color:white;
+}
+#copyright{
+    background-color:#262A36;
+    text-align: center;
+    position:relative;
+    top:-50px;
+}
+#payments{
+    background-color: #FFFFFF;
+}
+#payments img{
+    position:relative;
+    left:350px;
+   
+}

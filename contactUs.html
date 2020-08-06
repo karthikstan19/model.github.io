@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>About Us</title>
+	  <!-- bootstrap -->
+	  <link rel="stylesheet" type="text/css" href="file:///home/kutty/Desktop/kanishka-furniture/bootstrap/css/bootstrap.min.css">
+	  <script type="text/javascript" src="file:///home/kutty/Desktop/kanishka-furniture/bootstrap/js/bootstrap.min.js"></script>
+	  <!-- jquery -->
+	<link rel="stylesheet" type="text/css" href="file:///home/kutty/Desktop/kanishka-furniture/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="file:///home/kutty/Desktop/kanishka-furniture/jquery-ui.theme.min.css">
+	<script src="file:///home/kutty/Desktop/kanishka-furniture/jquery.js"></script>
+	<script src="file:///home/kutty/Desktop/kanishka-furniture/jquery-ui.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+
+   #jumbo{
+     background-image: url(images/contactbg.jpg);
+     height:100%;
+     margin-bottom: 70px;
+     position:relative;
+     top:100px;
+
+     
+
+   }
+   #jumbo input{
+     width:420px;
+     border-color: black;
+     border-radius: 20px;
+     
+   }
+   #errors p{
+    color:black;
+
+   }
+
+
+
+  </style>
+	
+
+
+</head>
+<body>
+
+	<!-- Navbar -->
+	<nav class="navbar navbar-expand-lg navbar-light" class="container-sm" style="background-color:#D9534F;" href="top" >
+	  <a class="navbar-brand" href="#" style="color:white">Kanishka Furnitures</a>
+
+	  <ul class="nav nav-pills " class="container-sm">
+	    <li class="nav-item">
+	      <a class="nav-link " href="index.html">HOME</a>
+	    </li>
+	    <li class="nav-item active">
+	      <a class="nav-link " href="about.html">ABOUT US</a>
+	    </li>
+	    <li class="nav-item" >
+	      <a class="nav-link" href="contactUs.html" style="color:black">CONTACT US</a>
+	    </li>
+	    
+	  </ul>
+
+	  </nav>
+
+
+    <div class="jumbotron" id="jumbo">
+      <h1 class="display-4" style="color:red; text-align:center;">Kanishka Furnitures</h1>
+      
+      <h3 style="color:black">GET IN TOUCH</h3>
+      <input class="form-control mr-sm-2" type="text" id="name" placeholder="Your Name" aria-label="name" required><br>
+      <input class="form-control mr-sm-2" type="email" id="email" placeholder="Your Email" aria-label="email" required><br>
+      <input class="form-control mr-sm-2" type="number" id="number" placeholder="Mobile Number" aria-label="number" required><br>
+      <div  id="errors"></div>
+      
+      <a class="btn btn-danger btn-lg" href="#" role="button" id="submit">SUBMIT</a><br><br>
+
+      <p class="lead" style="color:black;">We <b>Kanishka Furnitures</b> company are engaged in the manufacturing,<br> Supplying and exporting a wide collection of metal/weought iron furnitures and accessories</p>
+      <p class="lead"style="color:black; font-size: 30px;">Any company can make a good quality product for high price, or a poor quality product for a low price. But Kanishka furniture's puts all efforts to manufacture good quality products at low prices.</p>
+
+    </div>
+
+
+    
+    
+   
+    
+
+     <div class="jumbotron" id="endbar">
+         <h4> PLEASE CALL US ANYTIME </h4><br>
+       <h1 class="display-4">+91 9941460585</h1><br>
+
+       <p class="lead">Address: 222, Rabindra Sarani, chennai – 700 001 tamilnadu, India.</p>
+       <p class="lead">Email Address:kanishkafurnitures2@gmail.com</p>
+       
+     </div>
+     <div class="jumbotron" id="copyright">
+       <h4 class="lead">copyright by Kanishkafurnitures.</h4>
+       <br>
+      
+     
+     </div>
+
+     <script type="text/javascript">
+
+       function isEmail(email) {
+         var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+         return regex.test(email);
+       }
+       $("#submit").click(function(){
+        var error="";
+        var missing="";
+
+       if ($("#name").val()== ""){
+
+        missing += "<p>please! fill your name</p>"
+
+       }
+
+       if ($("#email").val()== ""){
+
+        missing += "<p>please! fill your Email id</p>"
+
+       }
+       if ($("#number").val()== ""){
+
+        missing += "<p>please! fill your contact number</p>"
+
+       }
+
+      
+
+       if(isEmail($("#email").val()) == false) {
+        error += "<p>invalid email</p>"
+       }
+       if ($("#name").val() < 1) {
+        error += "<p> invalid name</p>"
+       }
+      
+      var errors = "<p><b>This fields are missing</b></P>" + error+missing;
+      $("#errors").html(errors);
+
+       });
+     </script>
+
+
+</body>
+</html>
